@@ -25,6 +25,7 @@ package com.andrefrsousa.superbottomsheet
 
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Path
 import android.graphics.RectF
 import android.os.Build
@@ -108,6 +109,7 @@ internal class CornerRadiusFrameLayout : FrameLayout {
         if (hasMaximumSdk(Build.VERSION_CODES.JELLY_BEAN_MR1)) {
             setLayerType(LAYER_TYPE_SOFTWARE, null)
         }
+        background = null
     }
 
     private fun resetPath() = path.run {
