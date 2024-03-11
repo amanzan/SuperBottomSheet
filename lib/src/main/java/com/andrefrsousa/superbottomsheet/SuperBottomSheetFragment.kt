@@ -301,7 +301,7 @@ abstract class SuperBottomSheetFragment : BottomSheetDialogFragment() {
     @ColorInt
     open fun getStatusBarColor() = with(context!!.getAttrId(R.attr.superBottomSheet_statusBarColor)) {
         when (this) {
-            INVALID_RESOURCE_ID -> ContextCompat.getColor(context!!, context!!.getAttrId(R.attr.colorPrimaryDark))
+            INVALID_RESOURCE_ID -> ContextCompat.getColor(context!!, context!!.getAttrId(com.google.android.material.R.attr.colorPrimaryDark))
             else -> ContextCompat.getColor(context!!, this)
         }
     }

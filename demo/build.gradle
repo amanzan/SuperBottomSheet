@@ -6,11 +6,23 @@ android {
 
     defaultConfig {
         applicationId "com.andrefrsousa.superbottomsheet.demo"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
+        multiDexEnabled = true
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    namespace = "com.andrefrsousa.superbottomsheet.demo"
 }
 
 dependencies {
