@@ -28,9 +28,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.andrefrsousa.superbottomsheet.SuperBottomSheetFragment
-import kotlinx.android.synthetic.main.activity_demo.*
 
 class DemoActivity : AppCompatActivity() {
 
@@ -38,7 +38,7 @@ class DemoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_demo)
 
-        show_sheet.setOnClickListener {
+        findViewById<Button>(R.id.show_sheet).setOnClickListener {
             val sheet = DemoBottomSheetFragment()
             sheet.show(supportFragmentManager, "DemoBottomSheetFragment")
         }

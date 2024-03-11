@@ -137,7 +137,7 @@ abstract class SuperBottomSheetFragment : BottomSheetDialogFragment() {
         sheetTouchOutsideContainer = dialog?.findViewById(R.id.touch_outside)!!
 
         // Set the bottom sheet radius
-        sheetContainer.setBackgroundColor(getBackgroundColor())
+//        sheetContainer.setBackgroundColor(getBackgroundColor())
         sheetContainer.setCornerRadius(propertyCornerRadius)
 
         // Load bottom sheet behaviour

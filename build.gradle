@@ -1,12 +1,17 @@
 buildscript {
     repositories {
         google()
+        mavenCentral()
+        gradlePluginPortal()
+        //noinspection JcenterRepositoryObsolete
         jcenter()
+        maven { url = uri("https://jitpack.io") }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10"
+
     }
 }
 
@@ -14,6 +19,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
