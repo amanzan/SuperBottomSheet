@@ -65,16 +65,16 @@ internal class SuperBottomSheetDialog : AppCompatDialog {
     // region Constructor
 
     @Suppress("unused")
-    constructor(context: Context?) : this(context, 0)
+    constructor(context: Context) : this(context, 0)
 
-    constructor(context: Context?, theme: Int) : super(context, theme) {
+    constructor(context: Context, theme: Int) : super(context, theme) {
         // We hide the title bar for any style configuration. Otherwise, there will be a gap
         // above the bottom sheet when it is expanded.
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
     }
 
     @Suppress("unused")
-    constructor(context: Context?, cancelable: Boolean, cancelListener: OnCancelListener?) : super(context, cancelable, cancelListener) {
+    constructor(context: Context, cancelable: Boolean, cancelListener: OnCancelListener?) : super(context, cancelable, cancelListener) {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         this.cancelable = cancelable
     }
@@ -182,7 +182,11 @@ internal class SuperBottomSheetDialog : AppCompatDialog {
                 }
             }
 
-            override fun performAccessibilityAction(host: View, action: Int, args: Bundle): Boolean {
+            override fun performAccessibilityAction(
+                host: View,
+                action: Int,
+                args: Bundle?
+            ): Boolean {
                 if (action == AccessibilityNodeInfoCompat.ACTION_DISMISS && cancelable) {
                     cancel()
                     return true

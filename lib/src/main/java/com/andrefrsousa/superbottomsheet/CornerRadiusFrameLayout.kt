@@ -68,7 +68,7 @@ internal class CornerRadiusFrameLayout : FrameLayout {
         resetPath()
     }
 
-    override fun draw(canvas: Canvas?) = when {
+    override fun draw(canvas: Canvas) = when {
         noCornerRadius -> super.draw(canvas)
 
         else -> with(canvas!!) {
