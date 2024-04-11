@@ -1,8 +1,6 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-    id 'maven-publish'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
     namespace 'com.andrefrsousa.superbottomsheet'
@@ -13,6 +11,10 @@ android {
         targetSdkVersion 34
         versionCode 1
         versionName "1.0.0"
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     buildTypes {
@@ -35,6 +37,9 @@ android {
         viewBinding true
     }
 }
+
+group = "com.github.amanzan"
+version = android.defaultConfig.versionName
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'

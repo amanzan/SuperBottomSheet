@@ -52,7 +52,7 @@ class DemoBottomSheetFragment : SuperBottomSheetFragment() {
         return inflater.inflate(R.layout.fragment_demo_sheet, container, false)
     }
 
-    override fun getCornerRadius() = context!!.resources.getDimension(R.dimen.demo_sheet_rounded_corner)
+    override fun getCornerRadius() = requireContext().resources.getDimension(R.dimen.demo_sheet_rounded_corner)
 
     override fun getStatusBarColor() = Color.RED
 }
